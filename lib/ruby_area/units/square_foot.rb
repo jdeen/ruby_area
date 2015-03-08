@@ -1,16 +1,14 @@
 module RubyArea
   module Units
-    class Perch
+    class SquareFoot
+      attr_accessor :value
+
       def initialize value
         @value = value
       end
 
-      def to_perch
-        @value % 160
-      end
-
-      def to_acre
-        (@value / 160).floor
+      def to_square_meter
+        @value * 0.092903
       end
     end
   end
